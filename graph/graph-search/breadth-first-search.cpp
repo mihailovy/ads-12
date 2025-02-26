@@ -7,7 +7,7 @@
 const unsigned n = 14;
 
 /* Обхождане в ширина с начало връх v */
-const unsigned v = 5;
+const unsigned v = 1;
 
 /* Матрица на съседство на графа */
 // 1  2  3  4  5  6  7  8  9 10 11 12 13 14 
@@ -89,6 +89,7 @@ void BFS(unsigned i)
   // Докато опашката не е празна
   while (currentVert < queueEnd) {
     // Ще циклим от текущия елемент до края на опашката
+    
     for (p = currentVert; p < levelVertex; p++) {
       
       // p – вземаме поредния елемент от опашката
@@ -123,5 +124,6 @@ void BFS(unsigned i)
 int main(void) {
   printf("Walk peak by peak horizontally %u: \n", v);
   BFS(v-1);
+  printUsed();
   return 0;
 }
