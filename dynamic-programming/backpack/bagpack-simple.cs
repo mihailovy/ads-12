@@ -41,7 +41,7 @@ class Program
         Console.WriteLine("Best value: " + bestValue);
         Console.WriteLine("Items taken:");
 
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < weights.Length; i++)
         {
             if ((bestMask & (1 << i)) != 0)
                 Console.WriteLine("  Item " + (i + 1));
